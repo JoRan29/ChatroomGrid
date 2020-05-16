@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+* {
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 4fr;
+      grid-template-columns: 1fr 4fr;
+  -ms-grid-rows: 170px 850px;
+      grid-template-rows: 170px 850px;
+  min-height: 100vh;
+}
+
+.container svg {
+  position: absolute;
+  top: 170px;
+  pointer-events: none;
+  z-index: 300;
+}
+
+.header {
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(10%, #222831), color-stop(90%, #2d4059));
+  background-image: linear-gradient(to top, #222831 10%, #2d4059 90%);
+  color: #eeeeee;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
+  text-align: center;
+  min-width: 300px;
+}
+
+.header button {
+  width: 20%;
+  border-radius: 50px;
+  outline: none;
+  background-color: transparent;
+  padding: 3px;
+  border: solid 1px #eeeeee;
+  color: #2d4059;
+}
+
+.header button:hover {
+  color: #ff5722;
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+}
+
+.header .btn-selected {
+  background-color: #ee3900;
+  color: bisque;
+}
+
+.header h1 {
+  padding-top: 10px;
+  font-size: 40px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.header h1 span {
+  font-size: 50px;
+}
+
+.header h2 {
+  font-size: medium;
+  text-decoration: underline;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.header div {
+  padding-top: 10px;
+}
+
+.header h2 {
+  padding-top: 40px;
+  padding-bottom: 0;
+}
+
+.main {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#222831), to(#2d4059));
+  background-image: linear-gradient(#222831, #2d4059);
+  min-width: 300px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr;
+      grid-template-columns: 2fr;
+  -ms-grid-rows: 5fr 1fr;
+      grid-template-rows: 5fr 1fr;
+}
+
+.main section {
+  border-right: solid 3px #222831;
+  background-color: #eeeeee;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.main section ul {
+  margin-top: -10px;
+  list-style: none;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.main section ul .username {
+  font-weight: bold;
+  font-size: 22px;
+  margin-top: 5px;
+  text-decoration: underline;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: #222831;
+}
+
+.main section ul li {
+  -webkit-box-shadow: 10px 14px 15px 1px rgba(0, 0, 0, 0.425);
+  box-shadow: 10px 14px 15px 1px rgba(0, 0, 0, 0.438);
+  font-size: 20px;
+  background-color: #2d4059;
+  color: #eeeeee;
+  padding: 3px;
+  margin: 3px;
+  width: 70%;
+  float: left;
+  border-radius: 1px 8px;
+  margin-left: 20px;
+}
+
+.main section ul li img {
+  float: left;
+  cursor: pointer;
+  z-index: 200;
+  position: relative;
+  margin-top: -10px;
+  overflow: hidden;
+}
+
+.main section ul li.me {
+  background-color: #ff5722;
+  float: right;
+  margin-right: 20px;
+}
+
+.main section ul .date {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: #ffcbbb;
+  font-style: italic;
+  font-size: small;
+  opacity: 0.7;
+  margin-top: 2px;
+}
+
+.main form {
+  border-top: solid 2px #222831;
+  border-right: solid 2px #222831;
+  display: -ms-grid;
+  display: grid;
+}
+
+.main form textarea {
+  width: 90%;
+  margin: 10px auto;
+  border-radius: 3px;
+  margin-bottom: 0;
+  max-width: 1100px;
+  max-height: 300px;
+  font-size: 20px;
+}
+
+.main form textarea:hover {
+  border-color: #ff5722;
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+}
+
+.main form textarea:focus {
+  border-color: #ff5722;
+}
+
+.main form input {
+  font-size: 20px;
+  width: 90%;
+  margin: 0px auto;
+  margin-bottom: 5px;
+  border-radius: 0 0 10px 10px;
+  background: #222831;
+  border: solid 1px #ff5722;
+}
+
+.main form input:hover {
+  background-color: #eeeeee;
+  -webkit-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
+}
+
+.main #divUpdatedUsername {
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+  color: #ff5722;
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
+}
+
+.menu {
+  border-right: 2px solid #222831;
+  border-left: solid 3px #222831;
+  background-color: #ee3900;
+  min-width: 300px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.menu form {
+  display: -ms-grid;
+  display: grid;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.menu form h3 {
+  margin-top: 15%;
+  text-decoration: underline;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.menu form input.btn {
+  font-size: 15px;
+  width: 90%;
+  margin: 0px auto;
+  margin-bottom: 5px;
+  border-radius: 0 0 10px 10px;
+  outline: none;
+  background: transparent;
+  border: solid 1px #2d4059;
+}
+
+.menu form input.btn:hover {
+  background-color: #ff6a3c;
+  -webkit-transition: ease-in 0.3s;
+  transition: ease-in 0.3s;
+}
+
+.menu form input {
+  width: 90%;
+  margin: 10px auto;
+  border-radius: 3px;
+  margin-bottom: 0;
+  height: 30px;
+  background: #ff5722;
+  border: none;
+  color: #eeeeee;
+  cursor: pointer;
+}
+
+.menu #greeting {
+  text-align: center;
+  font-size: 50px;
+  overflow: hidden;
+}
+
+#formDate label {
+  text-align: left;
+  margin-left: 15px;
+  margin-top: 2px;
+}
+
+.footer {
+  background-color: #222831;
+  color: #eeeeee;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
+  min-width: 300px;
+  max-height: 90px;
+  padding-bottom: 30px;
+}
+
+.footer p {
+  text-align: center;
+  padding-top: 25px;
+}
+
+.footer p span {
+  color: #ff5722;
+}
+
+.neon {
+  color: #ff4b13;
+  text-shadow: 0 0 5px #eeeeee, 0 0 10px #eeeeee, 0 0 20px #ff5722, 0 0 40px #ff5722, 0 0 80px #ff5722, 0 0 90px #ff5722, 0 0 100px #ff5722, 0 0 150px #ff5722;
+}
+/*# sourceMappingURL=style_grid.css.map */

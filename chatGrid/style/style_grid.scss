@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+$baseColor: linear-gradient(to top, #222831 10%, #2d4059 90%);
+$accentColor: #ff5722;
+$fontColor: #eeeeee;
+$darkMain: #222831;
+$lightMain: #2d4059;
+
+* {
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 170px 850px;
+  min-height: 100vh;
+  svg {
+    position: absolute;
+    top: 170px;
+    pointer-events: none;
+    z-index: 300;
+  }
+}
+
+.header {
+  background-image: $baseColor;
+  color: $fontColor;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  text-align: center;
+  min-width: 300px;
+  button {
+    width: 20%;
+    border-radius: 50px;
+    outline: none;
+    background-color: transparent;
+    padding: 3px;
+    border: solid 1px $fontColor;
+    color: $lightMain;
+  }
+  button:hover {
+    color: $accentColor;
+    transition: 0.3s ease-in;
+  }
+  .btn-selected {
+    background-color: darken($color: $accentColor, $amount: 10);
+    color: bisque;
+  }
+  h1 {
+    padding-top: 10px;
+    font-size: 40px;
+    user-select: none;
+    span {
+      font-size: 50px;
+    }
+  }
+  h2 {
+    font-size: medium;
+    text-decoration: underline;
+    user-select: none;
+  }
+  div {
+    padding-top: 10px;
+  }
+  h2 {
+    padding-top: 40px;
+    padding-bottom: 0;
+  }
+}
+
+.main {
+  section {
+    border-right: solid 3px $darkMain;
+    background-color: $fontColor;
+    overflow: scroll;
+    overflow-x: hidden;
+    ul {
+      margin-top: -10px;
+      list-style: none;
+      padding-top: 50px;
+      text-align: center;
+      .username {
+        font-weight: bold;
+        font-size: 22px;
+        margin-top: 5px;
+        text-decoration: underline;
+        user-select: none;
+        color: $darkMain;
+      }
+      li {
+        -webkit-box-shadow: 10px 14px 15px 1px rgba(0, 0, 0, 0.425);
+        -moz-box-shadow: 10px 14px 15px 1px rgba(0, 0, 0, 0.486);
+        box-shadow: 10px 14px 15px 1px rgba(0, 0, 0, 0.438);
+        font-size: 20px;
+        background-color: $lightMain;
+        color: $fontColor;
+
+        padding: 3px;
+        margin: 3px;
+        width: 70%;
+        float: left;
+        border-radius: 1px 8px;
+        margin-left: 20px;
+        img {
+          float: left;
+          cursor: pointer;
+          z-index: 200;
+          position: relative;
+          margin-top: -10px;
+          overflow: hidden;
+        }
+      }
+      li.me {
+        background-color: $accentColor;
+        float: right;
+        margin-right: 20px;
+      }
+      .date {
+        user-select: none;
+        color: lighten($color: $accentColor, $amount: 30);
+        font-style: italic;
+        font-size: small;
+        opacity: 0.7;
+        margin-top: 2px;
+      }
+    }
+  }
+  background-image: linear-gradient(#222831, #2d4059);
+  min-width: 300px;
+  display: grid;
+  grid-template-columns: 2fr;
+  grid-template-rows: 5fr 1fr;
+  form {
+    border-top: solid 2px $darkMain;
+    border-right: solid 2px $darkMain;
+    display: grid;
+    textarea {
+      width: 90%;
+      margin: 10px auto;
+      border-radius: 3px;
+      margin-bottom: 0;
+      max-width: 1100px;
+      max-height: 300px;
+      font-size: 20px;
+    }
+    textarea:hover {
+      border-color: $accentColor;
+      transition: 0.3s ease-in;
+    }
+    textarea:focus {
+      border-color: $accentColor;
+    }
+    input {
+      font-size: 20px;
+      width: 90%;
+      margin: 0px auto;
+      margin-bottom: 5px;
+      border-radius: 0 0 10px 10px;
+      background: $darkMain;
+      border: solid 1px $accentColor;
+    }
+    input:hover {
+      background-color: $fontColor;
+      transition: 0.5s ease-in;
+    }
+  }
+  #divUpdatedUsername {
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    color: $accentColor;
+    transition: ease-in-out 0.2s;
+  }
+}
+
+.menu {
+  border-right: 2px solid $darkMain;
+  border-left: solid 3px $darkMain;
+  background-color: darken($color: $accentColor, $amount: 10);
+  min-width: 300px;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: center;
+  // grid-template-rows: 1fr;
+  form {
+    h3 {
+      margin-top: 15%;
+      text-decoration: underline;
+      user-select: none;
+    }
+    display: grid;
+    padding-top: 50px;
+    text-align: center;
+    input.btn {
+      font-size: 15px;
+      width: 90%;
+      margin: 0px auto;
+      margin-bottom: 5px;
+      border-radius: 0 0 10px 10px;
+      outline: none;
+      background: transparent;
+      border: solid 1px $lightMain;
+    }
+    input.btn:hover {
+      background-color: lighten($color: $accentColor, $amount: 5);
+      transition: ease-in 0.3s;
+    }
+    input {
+      width: 90%;
+      margin: 10px auto;
+      border-radius: 3px;
+      margin-bottom: 0;
+      height: 30px;
+      background: $accentColor;
+      border: none;
+      color: $fontColor;
+      cursor: pointer;
+    }
+  }
+  #greeting {
+    text-align: center;
+    font-size: 50px;
+    overflow: hidden;
+  }
+}
+#formDate {
+  label {
+    text-align: left;
+    margin-left: 15px;
+    margin-top: 2px;
+  }
+}
+
+.footer {
+  background-color: $darkMain;
+  color: $fontColor;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  min-width: 300px;
+  max-height: 90px;
+  padding-bottom: 30px;
+  p {
+    text-align: center;
+    padding-top: 25px;
+    span {
+      color: $accentColor;
+    }
+  }
+}
+
+.neon {
+  color: darken($color: $accentColor, $amount: 3);
+  text-shadow: 0 0 5px $fontColor, 0 0 10px $fontColor, 0 0 20px $accentColor,
+    0 0 40px $accentColor, 0 0 80px $accentColor, 0 0 90px $accentColor,
+    0 0 100px $accentColor, 0 0 150px $accentColor;
+}

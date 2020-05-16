@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style_grid.css" />
+    <title>Grid Skin - ItBootcamp Chat</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 class="neon"><span>[ITBootcamp]</span> chat</h1>
+        <nav>
+          <h2>choose a chatroom</h2>
+          <div>
+            <button id="general" class="btn btn-grad">#general</button>
+            <button id="js" class="btn btn-grad">#js</button>
+            <button id="test" class="btn btn-grad">#test</button>
+            <button id="homework" class="btn btn-grad">#homework</button>
+          </div>
+        </nav>
+      </header>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 12 1040 300">
+        <path
+          fill="#222831"
+          fill-opacity="1"
+          d="M0,64L80,64C160,64,320,64,480,53.3C640,43,800,21,960,53.3C1120,85,1280,171,1360,213.3L1440,256L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
+        ></path>
+      </svg>
+      <nav class="menu">
+        <div id="greeting"></div>
+        <form id="formColor">
+          <h3>chat settings</h3>
+          <br />
+          <input type="color" value="#ffffff" id="color" />
+          <input type="submit" value="update color" id="btnColor" class="btn" />
+        </form>
+        <form id="formUpdateUsername">
+          <input
+            type="text"
+            name="inputUsername"
+            id="inputUsername"
+            placeholder="New username..."
+          />
+          <input
+            type="submit"
+            value="update username"
+            id="btnUpdateUsername"
+            class="btn"
+          />
+        </form>
+        <form id="formDate">
+          <label for="">from:</label>
+          <input type="date" name="" id="" />
+          <label for="">to:</label>
+          <input type="date" name="" id="" />
+          <input type="submit" value="set date" class="btn" />
+        </form>
+      </nav>
+      <main class="main">
+        <section>
+          <ul>
+            <!-- Msgs -->
+          </ul>
+        </section>
+        <form id="formNewMessage">
+          <textarea
+            type="text"
+            name="inputMessage"
+            id="inputMessage"
+            placeholder="Your message..."
+            cols="35"
+            rows="3"
+          ></textarea>
+          <input type="submit" value="send" id="btnSend" class="btn" />
+        </form>
+        <div id="divUpdatedUsername"></div>
+      </main>
+      <footer class="footer">
+        <p>Copyright © 2020 <span>Jovana</span> | Powered by Coffee &#9786;</p>
+      </footer>
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+      // Your web app's Firebase configuration
+      // ADD YOUR FIREBASE CONFIGURATION HERE
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      let db = firebase.firestore();
+    </script>
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
