@@ -2,13 +2,18 @@
 OOP JS, Grid, Scss
 
 # Change color theme easily!
--adjust scss variable $accentColor to adjust the color as you like it!
+-adjust scss variable $accentColor to choose one of the color above!
+(or any other color that you may like better! ;))
 
-![Chatroom Orange] https://prnt.sc/si4ibp
+##### Orange Example
+![Chatroom Orange](/img/orange.png)
 
-![Chatroom Green] https://prnt.sc/si4k1p
+##### Green Example
+![Chatroom Green](/img/green.png)
 
-![Chatroom Purple] http://prntscr.com/si4kmc
+##### Purple Example 
+![Chatroom Purple](/img/purple.png)
+
 
 ## Contributing
 Pull requests are welcome.
