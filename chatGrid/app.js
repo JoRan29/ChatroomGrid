@@ -11,9 +11,11 @@ let colorInput = document.querySelector("#color");
 let colorForm = document.querySelector("#formColor");
 let navBtns = document.querySelectorAll("nav button");
 let dateForm = document.getElementById("formDate");
+console.log(dateForm);
 let dateStart = document.getElementById("dateStart");
 let dateEnd = document.getElementById("dateEnd");
 let divGreet = document.getElementById("greeting");
+let section = document.querySelector("section");
 // get username from local memory
 let username = () => {
   if (localStorage.username) {
@@ -106,6 +108,8 @@ formUpdateUsername.addEventListener("submit", (e) => {
   formUpdateUsername.reset();
 });
 
+divGreet.style.userSelect = "none";
+
 if (localStorage.username != "anon" && localStorage.username) {
   divGreet.innerHTML = `Hello, ${localStorage.username}!`;
 } else {
@@ -120,17 +124,10 @@ colorForm.addEventListener("submit", (e) => {
 });
 
 if (localStorage.color) {
-  document.body.style.backgroundColor = localStorage.color;
+  section.style.backgroundColor = localStorage.color;
 } else {
-  document.body.style.backgroundColor = "white";
+  section.style.backgroundColor = "white";
 }
-
-// set date
-dateForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  let start = dateStart.value;
-  let end = dateEnd.value;
-});
 
 // top secret
 console.log("Super secret data :O");
@@ -152,3 +149,5 @@ ulList.addEventListener("click", (e) => {
     }
   }
 });
+
+//setDate

@@ -11,6 +11,7 @@ $lightMain: #2d4059;
   padding: 0;
   box-sizing: border-box;
   outline: none;
+  max-height: fit-content;
 }
 
 .container {
@@ -18,6 +19,7 @@ $lightMain: #2d4059;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 170px 850px;
   min-height: 100vh;
+  min-height: -webkit-fill-available;
   svg {
     position: absolute;
     top: 170px;
@@ -45,6 +47,7 @@ $lightMain: #2d4059;
   button:hover {
     color: $accentColor;
     transition: 0.3s ease-in;
+    cursor: pointer;
   }
   .btn-selected {
     background-color: darken($color: $accentColor, $amount: 10);
@@ -225,6 +228,7 @@ $lightMain: #2d4059;
     text-align: center;
     font-size: 50px;
     overflow: hidden;
+    user-select: none;
   }
 }
 #formDate {

@@ -6,6 +6,9 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   outline: none;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
 }
 
 .container {
@@ -16,6 +19,7 @@
   -ms-grid-rows: 170px 850px;
       grid-template-rows: 170px 850px;
   min-height: 100vh;
+  min-height: -webkit-fill-available;
 }
 
 .container svg {
@@ -50,6 +54,7 @@
   color: #ff5722;
   -webkit-transition: 0.3s ease-in;
   transition: 0.3s ease-in;
+  cursor: pointer;
 }
 
 .header .btn-selected {
@@ -281,6 +286,10 @@
   text-align: center;
   font-size: 50px;
   overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 #formDate label {
