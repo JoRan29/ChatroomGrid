@@ -14,6 +14,9 @@ OOP JS, Grid, Scss
 ##### Purple Example 
 ![Chatroom Purple](/img/purple.png)
 
+### REMINDER
+Be sure to add your own firebase config in the index.html file!
+Labeled by - // ADD YOUR FIREBASE CONFIGURATION HERE
 
 ## Contributing
 Pull requests are welcome.
