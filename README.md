@@ -2,7 +2,7 @@
 OOP JS, Grid, Scss
 
 # Change color theme easily!
--adjust scss variable $accentColor to choose one of the color above!
+-adjust scss variable $accentColor to choose one of the colors below!
 (or any other color that you may like better! ;))
 
 ##### Orange Example
